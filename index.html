@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miss-Mary-Web</title>
+
+    <!-- Standard Favicon (16x16) -->
+    <link
+      rel="icon"
+      href="./styles/img/icons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+
+    <!-- Larger Favicon (32x32) -->
+    <link
+      rel="icon"
+      href="./styles/img/icons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+
+    <!-- 512x512px Favicon -->
+    <link
+      rel="icon"
+      href="./styles/img/icons/android-chrome-512x512.png"
+      sizes="512x512"
+      type="image/png"
+    />
+
+    <!-- Optional: For Apple and Android devices -->
+    <link
+      rel="apple-touch-icon"
+      href="./styles/img/icons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/styles/img/icons/android-chrome-192x192.png"
+      sizes="192x192"
+      type="image/png"
+    />
+
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <!--script-->
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!-- Welcome Messages -->
+    <div class="welcome-message">
+      <h1>Welcome to My Lessons, I'm miss Mary!</h1>
+
+      <p>
+        Descuento especial por ser estudiante nuevo.
+        <a href="#contacto">¡Contáctame para más información!</a>
+      </p>
+    </div>
+
+    <!-- Logo outside of navbar -->
+    <div class="logo">
+      <img src="./styles/img/icons/missmary-logo.png" alt="MissMary Logo" />
+    </div>
+
+    <div class="menuIcons">
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <div class="bx bx-x" id="close-icon"></div>
+    </div>
+
+    <!-- Navbar -->
+
+    <nav>
+      <!--menuIcon-->
+
+      <ul>
+        <li><a href="#acerca-de-mi">Acerca de Mí</a></li>
+        <li><a href="#mis-objetivos">Mis Objetivos</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#english-quiz">English Quiz</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Presentation Card -->
+    <aside class="presentation-card">
+      <img
+        src="./styles/img/IMG-20241209-WA0011.jpg"
+        alt="Miss Mary"
+        class="profile-pic"
+      />
+      <div class="card-info">
+        <p><strong>Tarifa:</strong> €20/hr</p>
+        <p><strong>Working Hours:</strong> 9 AM - 6 PM</p>
+        <p><strong>Número de alumnos en curso:</strong> 30</p>
+      </div>
+    </aside>
+
+    <!-- Sections -->
+
+    <section id="acerca-de-mi">
+      <h2>Acerca de Mí</h2>
+      <p>
+        Hola, soy una apasionada profesora de inglés de Zona Norte, Buenos
+        Aires, Argentina, con más de 30 años de experiencia en la enseñanza a
+        estudiantes de todos los niveles. Ofrezco clases personalizadas y
+        grupales a través de Zoom o Meet, adaptándome a las necesidades de
+        niños, adolescentes y adultos. Además, preparo a mis alumnos para
+        exámenes de Cambridge y diseño cursos intensivos para adultos que desean
+        avanzar rápidamente en su aprendizaje.
+      </p>
+    </section>
+
+    <section id="mis-objetivos">
+      <h2>Mis Objetivos</h2>
+      <p>
+        Mi principal objetivo es guiar a mis estudiantes para que alcancen
+        fluidez en inglés de manera práctica, dinámica y adaptada a sus
+        necesidades. Mis clases están diseñadas para ser tanto visuales como
+        teóricas, combinando actividades interactivas con explicaciones claras
+        para reforzar la comprensión. Busco despertar el interés y la motivación
+        de cada alumno a través de lecciones que integran material audiovisual,
+        conversaciones reales y ejercicios creativos, haciendo que aprender
+        inglés sea una experiencia atractiva y enriquecedora. Mi enfoque
+        personalizado garantiza que cada estudiante progrese a su ritmo mientras
+        desarrolla confianza y habilidades comunicativas sólidas.
+      </p>
+    </section>
+
+    <section id="experiencia">
+      <h2>Experiencia</h2>
+      <p>
+        Con más de 30 años de experiencia en la enseñanza del idioma inglés,
+        Miss Mary se ha ganado una reputación de excelencia enseñando a
+        estudiantes de todos los niveles, desde principiantes hasta avanzados.
+        Ha trabajado en instituciones prestigiosas y ha ofrecido clases
+        personalizadas a estudiantes particulares, adaptando su metodología para
+        alcanzar los objetivos individuales de cada alumno. Especialista en la
+        preparación de exámenes de Cambridge, Miss Mary ha ayudado a
+        innumerables estudiantes a obtener certificaciones como PET, FCE y CAE,
+        brindándoles las habilidades y la confianza necesarias para triunfar en
+        sus objetivos académicos, profesionales y personales. Su dedicación a la
+        enseñanza hace de ella una experta de confianza en educación en inglés.
+      </p>
+    </section>
+
+    <section id="english-quiz">
+      <h2>English Quiz</h2>
+      <p>
+        Test your knowledge of English grammar and vocabulary with this quiz!
+      </p>
+
+      <form id="quiz-form">
+        <!-- Question 1 -->
+        <div class="question">
+          <p>
+            1. Complete the sentence: *I have been working here ___ three
+            years.*
+          </p>
+          <input type="radio" id="q1a1" name="q1" value="incorrect" />
+          <label for="q1a1">since</label><br />
+          <input type="radio" id="q1a2" name="q1" value="correct" />
+          <label for="q1a2">for</label><br />
+          <input type="radio" id="q1a3" name="q1" value="incorrect" />
+          <label for="q1a3">during</label>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+          <p>
+            2. Choose the correct word: *She speaks English ______ than I do.*
+          </p>
+          <input type="radio" id="q2a1" name="q2" value="correct" />
+          <label for="q2a1">better</label><br />
+          <input type="radio" id="q2a2" name="q2" value="incorrect" />
+          <label for="q2a2">more good</label><br />
+          <input type="radio" id="q2a3" name="q2" value="incorrect" />
+          <label for="q2a3">gooder</label>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+          <p>3. What is the past tense of *go*?</p>
+          <input type="radio" id="q3a1" name="q3" value="correct" />
+          <label for="q3a1">went</label><br />
+          <input type="radio" id="q3a2" name="q3" value="incorrect" />
+          <label for="q3a2">gone</label><br />
+          <input type="radio" id="q3a3" name="q3" value="incorrect" />
+          <label for="q3a3">goed</label>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+          <p>
+            4. Choose the correct option: *If I _____ you, I would apologize.*
+          </p>
+          <input type="radio" id="q4a1" name="q4" value="correct" />
+          <label for="q4a1">were</label><br />
+          <input type="radio" id="q4a2" name="q4" value="incorrect" />
+          <label for="q4a2">was</label><br />
+          <input type="radio" id="q4a3" name="q4" value="incorrect" />
+          <label for="q4a3">am</label>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+          <p>5. Identify the synonym: *What is a synonym for 'happy'?*</p>
+          <input type="radio" id="q5a1" name="q5" value="correct" />
+          <label for="q5a1">joyful</label><br />
+          <input type="radio" id="q5a2" name="q5" value="incorrect" />
+          <label for="q5a2">angry</label><br />
+          <input type="radio" id="q5a3" name="q5" value="incorrect" />
+          <label for="q5a3">sad</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="button" onclick="checkQuiz()">Submit</button>
+      </form>
+
+      <p id="quiz-result"></p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>
+        Puedes contactarme a través del correo:
+        <a href="mailto:miss-mary-teacher@correo.com"
+          >miss-mary-teacher@correo.com</a
+        >
+      </p>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" title="Ir al principio">↑</button>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; 2024 Miss Mary profesora de Inglés. Todos los derechos
+        reservados.
+      </p>
+    </footer>
+  </body>
+</html>
