@@ -2,7 +2,8 @@
 
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: auto;
+  
 }
 
 body {
@@ -430,19 +431,19 @@ footer {
   }
 
   #english-quiz h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   #english-quiz p {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 
   #english-quiz .question p {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
   }
 
   #english-quiz label {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   #english-quiz button {
@@ -463,12 +464,13 @@ footer {
 
 @media (max-width: 768px) {
   body {
-    overflow-x: hidden;
+    overflow-x: hidden; 
   }
+
 
   html {
     width: 100%;
-    overflow-x: hidden;
+
 
     font-size: 65%;
   }
@@ -490,10 +492,12 @@ footer {
   nav {
     width: 100%;
     top: -100%;
-
+    left: 0;
+    right: 0;
+    position: absolute;
     background-color: #ffe5e5;
     z-index: 1000;
-    position: absolute;
+    
   }
 
   nav ul {
@@ -551,12 +555,16 @@ footer {
 
   nav.nav-open {
     top: 0;
+   
+
   }
 
   nav.nav-open ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+ 
   }
 
   /* When nav is open, hide menu icon and show close icon */
@@ -650,10 +658,11 @@ footer {
   }
 
   #scroll-top {
-    bottom: 0.9375rem;
-    right: 0.9375rem;
-    padding: 0.5rem 0.625rem;
+    bottom: 1rem; 
+    right: 1rem; 
     font-size: 2rem;
+    padding: 0.5rem 0.625rem;
+
   }
 }
 
@@ -665,31 +674,28 @@ footer {
   #scroll-top {
     left: 50%;
     transform: translateX(-50%);
+    bottom: 4rem; 
     right: auto;
-    bottom: 4rem;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
   }
+
   #contacto {
-    text-align: center; /* Centers everything inside */
-    padding: 1rem; /* Slightly less padding for better spacing */
+    text-align: center; 
+    padding: 1rem; 
   }
 
   #contacto h2 {
-    text-align: center; /* Centers the heading */
+    text-align: center; 
   }
 
   #contacto p {
-    text-align: center; /* Centers the paragraph */
-    font-size: 1.8rem; /* Slightly smaller for better readability */
-    line-height: 1.6; /* Keeps text comfortable to read */
+    text-align: center; 
+    font-size: 1.8rem; 
+    line-height: 1.6; 
   }
 
   #contacto a {
-    display: inline-block; /* Prevents link from breaking weirdly */
-    font-size: 1.5rem; /* Matches the text */
+    display: inline-block; 
+    font-size: 1.5rem; 
   }
 
  
