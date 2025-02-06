@@ -9,12 +9,20 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopButton.addEventListener("click", () => {
+
   window.scrollTo({
     top: 0,
     left: 0,
     behavior: "smooth",
   });
+
+
+
 });
+
+
+
+
 
 // Smooth scroll to anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
