@@ -1,8 +1,12 @@
 /* General styles */
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 body {
@@ -161,6 +165,7 @@ section {
   padding: 1.5rem;
   margin: 5.5rem 0;
   text-align: left;
+  box-sizing: border-box;
 }
 
 section:nth-child(even) {
@@ -462,16 +467,14 @@ footer {
 }
 
 @media (max-width: 768px) {
-
-  
-  
   body {
     overflow-x: hidden;
   }
 
   html {
     width: 100%;
-
+    height: 100%;
+    margin: 0;
     font-size: 65%;
   }
 
@@ -494,6 +497,7 @@ footer {
     position: absolute;
     top: -100%;
     transition: top 0.3s ease-in-out;
+    z-index: 1000;
   }
 
   nav ul {
@@ -551,8 +555,6 @@ footer {
 
   nav.nav-open {
     top: 0;
-    
-
   }
 
   nav.nav-open ul {

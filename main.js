@@ -1,5 +1,10 @@
 const scrollTopButton = document.getElementById("scroll-top");
+const menuIcon = document.getElementById("menu-icon");
+const closeIcon = document.getElementById("close-icon");
+const nav = document.querySelector("nav");
+const menuIcons = document.querySelector(".menuIcons");
 
+// Scroll event to show/hide scroll-top button
 window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
     scrollTopButton.style.display = "block";
@@ -8,23 +13,66 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Function to handle screen resize
+function handleResize() {
+  if (window.innerWidth > 768) {
+    menuIcon.style.display = "none"; // Hide menu-icon on larger screens
+    closeIcon.style.display = "none"; // Ensure close-icon is also hidden
+    nav.classList.remove("nav-open"); // Ensure nav is visible normally
+    menuIcons.classList.remove("nav-open"); // Reset mobile menu styles
+  } else {
+    // Only show menu-icon if nav is closed (prevents unwanted reappearance)
+    if (!nav.classList.contains("nav-open")) {
+      menuIcon.style.display = "block";
+    }
+  }
+}
+
+// Listen for window resize
+window.addEventListener("resize", handleResize);
+
+// Run it once on page load
+handleResize();
+// Menu icon click event (opens nav)
+menuIcon.addEventListener("click", () => {
+  nav.classList.add("nav-open");
+  menuIcons.classList.add("nav-open");
+
+  // Toggle icons correctly
+  menuIcon.style.display = "none";
+  closeIcon.style.display = "block";
+});
+
+// Close icon click event (closes nav)
+closeIcon.addEventListener("click", () => {
+  nav.classList.remove("nav-open");
+  menuIcons.classList.remove("nav-open");
+
+  // Toggle icons correctly
+  menuIcon.style.display = "block";
+  closeIcon.style.display = "none";
+});
+
+// Scroll to top button click event
 scrollTopButton.addEventListener("click", () => {
+  if (window.innerWidth <= 768) {
+    nav.classList.remove("nav-open"); // Close nav
+    menuIcons.classList.remove("nav-open"); // Hide menu container
+
+    // Reset icons properly
+    menuIcon.style.display = "block";
+    closeIcon.style.display = "none";
+  }
 
   window.scrollTo({
     top: 0,
     left: 0,
     behavior: "smooth",
   });
-
-
-
 });
 
 
-
-
-
-// Smooth scroll to anchor links
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -33,6 +81,16 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       behavior: "smooth",
       block: "start",
     });
+
+    // Close nav only on small screens
+    if (window.innerWidth <= 768) {
+      nav.classList.remove("nav-open");
+      menuIcons.classList.remove("nav-open");
+
+      // Reset icons properly
+      menuIcon.style.display = "block";
+      closeIcon.style.display = "none";
+    }
   });
 });
 
@@ -88,18 +146,3 @@ function checkQuiz() {
     result.textContent = "";
   }, 5000);
 }
-
-const menuIcon = document.getElementById("menu-icon");
-const closeIcon = document.getElementById("close-icon");
-const nav = document.querySelector("nav");
-const menuIcons = document.querySelector(".menuIcons");
-
-menuIcon.addEventListener("click", () => {
-  nav.classList.add("nav-open");
-  menuIcons.classList.add("nav-open");
-});
-
-closeIcon.addEventListener("click", () => {
-  nav.classList.remove("nav-open");
-  menuIcons.classList.remove("nav-open");
-});
