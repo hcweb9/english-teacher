@@ -16,12 +16,12 @@ window.addEventListener("scroll", () => {
 // Function to handle screen resize
 function handleResize() {
   if (window.innerWidth > 768) {
-    menuIcon.style.display = "none"; // Hide menu-icon on larger screens
-    closeIcon.style.display = "none"; // Ensure close-icon is also hidden
-    nav.classList.remove("nav-open"); // Ensure nav is visible normally
-    menuIcons.classList.remove("nav-open"); // Reset mobile menu styles
+    menuIcon.style.display = "none"; 
+    closeIcon.style.display = "none"; 
+    nav.classList.remove("nav-open"); 
+    menuIcons.classList.remove("nav-open"); 
   } else {
-    // Only show menu-icon if nav is closed (prevents unwanted reappearance)
+    // Only show menu-icon if nav is closed 
     if (!nav.classList.contains("nav-open")) {
       menuIcon.style.display = "block";
     }
@@ -33,12 +33,13 @@ window.addEventListener("resize", handleResize);
 
 // Run it once on page load
 handleResize();
-// Menu icon click event (opens nav)
+
+// Menu icon click event 
 menuIcon.addEventListener("click", () => {
   nav.classList.add("nav-open");
   menuIcons.classList.add("nav-open");
 
-  // Toggle icons correctly
+  // Toggle 
   menuIcon.style.display = "none";
   closeIcon.style.display = "block";
 });
@@ -56,8 +57,8 @@ closeIcon.addEventListener("click", () => {
 // Scroll to top button click event
 scrollTopButton.addEventListener("click", () => {
   if (window.innerWidth <= 768) {
-    nav.classList.remove("nav-open"); // Close nav
-    menuIcons.classList.remove("nav-open"); // Hide menu container
+    nav.classList.remove("nav-open"); 
+    menuIcons.classList.remove("nav-open"); 
 
     // Reset icons properly
     menuIcon.style.display = "block";
